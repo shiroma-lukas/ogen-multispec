@@ -1,4 +1,4 @@
-module github.com/ogen-go/ogen
+module github.com/shiroma-lukas/ogen-multispec
 
 go 1.25.0
 

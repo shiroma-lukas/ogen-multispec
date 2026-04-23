@@ -1,5 +1,5 @@
 {{ define "request_decoders" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}
 {{ template "header" $ }}
 
 {{- if $.PathsServerEnabled }}
@@ -17,7 +17,7 @@
 {{ end }}
 
 {{ define "request_decoders/operation" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen/ir.Operation*/ -}}{{ $op := $ }}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen/ir.Operation*/ -}}{{ $op := $ }}
 func (s *{{ if $op.WebhookInfo }}Webhook{{ end }}Server) decode{{ $op.Name }}Request(r *http.Request) (
 	req {{ $op.Request.GoType }},
 	rawBody []byte,
@@ -180,7 +180,7 @@ func (s *{{ if $op.WebhookInfo }}Webhook{{ end }}Server) decode{{ $op.Name }}Req
 {{ end }}
 
 {{- define "decode_form_request" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.Elem*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.Elem*/ -}}
 {{- $t := $.Type }}
 {{- $v := $.Var }}
 

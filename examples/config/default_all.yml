@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/ogen-go/ogen/main/schemas/ogen.jsonschema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/shiroma-lukas/ogen-multispec/main/schemas/ogen.jsonschema.json
 
 # This file shows the configuration with all default options.
 

@@ -11,13 +11,13 @@ paths:
           in: query
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/foo/decimal.Decimal
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/foo/decimal.Decimal
             default: '1.23'
         - name: bar
           in: query
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/bar/decimal.Decimal
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/bar/decimal.Decimal
             x-ogen-name: Decimal2
             default: 1.23
       responses:
@@ -30,11 +30,11 @@ paths:
                 properties:
                   foo:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/foo/decimal.Decimal
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/foo/decimal.Decimal
                     default: '1.23'
                   bar:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/bar/decimal.Decimal
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/bar/decimal.Decimal
                     x-ogen-name: Decimal2
                     default: 1.23
 
@@ -47,13 +47,13 @@ paths:
           required: true
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/foo/decimal.Decimal
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/foo/decimal.Decimal
         - name: bar
           in: query
           required: true
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/bar/decimal.Decimal
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/bar/decimal.Decimal
             x-ogen-name: Decimal2
       responses:
         '200':
@@ -68,8 +68,8 @@ paths:
                 properties:
                   foo:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/foo/decimal.Decimal
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/foo/decimal.Decimal
                   bar:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/bar/decimal.Decimal
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/bar/decimal.Decimal
                     x-ogen-name: Decimal2

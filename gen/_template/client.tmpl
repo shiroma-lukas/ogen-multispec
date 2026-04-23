@@ -1,5 +1,5 @@
 {{ define "client" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}
 {{ template "header" $ }}
 
 {{- if $.RequestOptionsEnabled }}
@@ -205,8 +205,8 @@ func NewWebhookClient(opts ...ClientOption) (*WebhookClient, error) {
 {{ end }}
 
 {{ define "client/operation" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.OperationElem*/ -}}{{ $op := $.Operation }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}{{ $cfg := $.Config }}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.OperationElem*/ -}}{{ $op := $.Operation }}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}{{ $cfg := $.Config }}
 {{- $otel := $cfg.OpenTelemetryEnabled }}
 // {{ $op.Name }} invokes {{ $op.PrettyOperationID }} operation.
 //

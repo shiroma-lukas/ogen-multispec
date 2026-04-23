@@ -8,7 +8,7 @@ Previously, ogen only supported `uniqueItems: true` on arrays of primitive types
 
 ### Motivation
 
-GitHub issue [#1563](https://github.com/ogen-go/ogen/issues/1563) identified that 11 operations in the JIRA API v3 spec were blocked because they use `uniqueItems` on arrays of complex objects. This implementation removes that limitation.
+GitHub issue [#1563](https://github.com/shiroma-lukas/ogen-multispec/issues/1563) identified that 11 operations in the JIRA API v3 spec were blocked because they use `uniqueItems` on arrays of complex objects. This implementation removes that limitation.
 
 ## How It Works
 

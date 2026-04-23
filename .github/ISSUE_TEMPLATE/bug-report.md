@@ -10,7 +10,7 @@ labels: bug
 ### What version of ogen are you using?
 
 ```bash
-$ go list -m github.com/ogen-go/ogen
+$ go list -m github.com/shiroma-lukas/ogen-multispec
 ```
 
 ### Can this issue be reproduced with the latest version?

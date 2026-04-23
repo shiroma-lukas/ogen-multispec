@@ -1,5 +1,5 @@
 {{ define "security" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}
 {{ template "header" $ }}
 {{- if $.Securities }}
 
@@ -187,7 +187,7 @@ func (s *Client) security{{ $s.Type.Name }}(ctx context.Context, operationName O
 {{ end }}
 
 {{ define "security/scopes" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}
 {{ range $s := $.Securities }}
 
 {{if $s.Format.IsOAuth2Security}}

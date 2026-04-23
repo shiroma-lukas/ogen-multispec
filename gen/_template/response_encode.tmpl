@@ -1,4 +1,4 @@
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}
 {{ define "response_encoders" }}
 {{ template "header" $ }}
 
@@ -52,8 +52,8 @@ func encodeErrorResponse(response {{ $.ErrorGoType }}, w http.ResponseWriter, {{
 {{ end }}
 
 {{ define "response_encoders/operation" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.OperationElem*/ -}}{{ $op := $.Operation }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}{{ $cfg := $.Config }}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.OperationElem*/ -}}{{ $op := $.Operation }}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}{{ $cfg := $.Config }}
 {{- $otel := $cfg.OpenTelemetryEnabled }}
 func encode{{ $op.Name }}Response(response {{ $op.Responses.GoType }}, w http.ResponseWriter, {{ if $otel }}span trace.Span{{ end }}) error {
 	{{- $types := $op.ListResponseTypes $otel }}
@@ -91,7 +91,7 @@ func encode{{ $op.Name }}Response(response {{ $op.Responses.GoType }}, w http.Re
 {{ end }}
 
 {{ define "respond" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen/ir.ResponseInfo*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen/ir.ResponseInfo*/ -}}
 
 {{- if and (not $.NoContent) (not $.ContentType.Mask) }}
 	w.Header().Set("Content-Type", {{ $.ContentTypeHeader }})
@@ -201,7 +201,7 @@ w.Header().Set("Access-Control-Expose-Headers", {{ $exposeHeaders }})
 {{ end }}
 
 {{ define "respond/return" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen/ir.ResponseInfo*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen/ir.ResponseInfo*/ -}}
 {{- if $.WithStatusCode }}
 if code >= http.StatusInternalServerError {
 	return errors.Wrapf(ht.ErrInternalServerErrorResponse, "code: %d, message: %s", code, http.StatusText(code))

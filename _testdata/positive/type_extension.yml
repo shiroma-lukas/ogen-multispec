@@ -11,63 +11,63 @@ paths:
           in: query
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringOgen
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringOgen
             default: '10'
         - name: ogenNumber
           in: query
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.NumberOgen
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberOgen
             default: 20
         - name: jsonString
           in: query
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
             default: '30'
         - name: jsonNumber
           in: query
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.NumberJSON
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberJSON
             default: 40
         - name: textString
           in: query
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Text
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Text
             default: '50'
         - name: textNumber
           in: query
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Text
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Text
             default: 60
         - name: binaryByte
           in: query
           schema:
             type: string
             format: byte
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Binary
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Binary
             default: NzA=
         - name: binaryBase64
           in: query
           schema:
             type: string
             format: base64
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Binary
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Binary
             default: ODA=
         - name: string
           in: query
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.String
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.String
             default: '90'
         - name: number
           in: query
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Number
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Number
             default: 100
         - name: alias
           in: query
@@ -78,7 +78,7 @@ paths:
           in: query
           schema:
             type: number
-            x-ogen-type: '*github.com/ogen-go/ogen/_testdata/testtypes.NumberOgen'
+            x-ogen-type: '*github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberOgen'
             x-ogen-name: Pointer
             default: 120
         - name: aliasPointer
@@ -92,7 +92,7 @@ paths:
             type: array
             items:
               type: string
-              x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+              x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
       responses:
         '200':
           description: Test
@@ -103,52 +103,52 @@ paths:
                 properties:
                   ogenString:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringOgen
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringOgen
                     default: '10'
                   ogenNumber:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.NumberOgen
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberOgen
                     default: 20
                   jsonString:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
                     default: '30'
                   jsonNumber:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.NumberJSON
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberJSON
                     default: 40
                   textString:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Text
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Text
                     default: '50'
                   textNumber:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Text
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Text
                     default: 60
                   binaryByte:
                     type: string
                     format: byte
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Binary
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Binary
                     default: NzA=
                   binaryBase64:
                     type: string
                     format: base64
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Binary
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Binary
                     default: ODA=
                   string:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.String
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.String
                     default: '90'
                   number:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Number
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Number
                     default: 100
                   alias:
                     $ref: '#/components/schemas/Alias'
                     default: '110'
                   pointer:
                     type: number
-                    x-ogen-type: '*github.com/ogen-go/ogen/_testdata/testtypes.NumberOgen'
+                    x-ogen-type: '*github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberOgen'
                     x-ogen-name: Pointer
                     default: 120
                   aliasPointer:
@@ -166,12 +166,12 @@ paths:
                     type: array
                     items:
                       type: string
-                      x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+                      x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
                   map:
                     type: object
                     additionalProperties:
                       type: string
-                      x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+                      x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
 
   /required:
     get:
@@ -182,63 +182,63 @@ paths:
           required: true
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringOgen
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringOgen
         - name: ogenNumber
           in: query
           required: true
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.NumberOgen
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberOgen
         - name: jsonString
           in: query
           required: true
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
         - name: jsonNumber
           in: query
           required: true
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.NumberJSON
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberJSON
         - name: textString
           in: query
           required: true
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Text
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Text
         - name: textNumber
           in: query
           required: true
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Text
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Text
         - name: binaryByte
           in: query
           required: true
           schema:
             type: string
             format: byte
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Binary
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Binary
         - name: binaryBase64
           in: query
           required: true
           schema:
             type: string
             format: base64
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Binary
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Binary
         - name: string
           in: query
           required: true
           schema:
             type: string
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.String
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.String
         - name: number
           in: query
           required: true
           schema:
             type: number
-            x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Number
+            x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Number
         - name: alias
           in: query
           required: true
@@ -249,7 +249,7 @@ paths:
           required: true
           schema:
             type: number
-            x-ogen-type: '*github.com/ogen-go/ogen/_testdata/testtypes.NumberOgen'
+            x-ogen-type: '*github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberOgen'
             x-ogen-name: Pointer
         - name: aliasPointer
           in: query
@@ -263,7 +263,7 @@ paths:
             type: array
             items:
               type: string
-              x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+              x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
       responses:
         '200':
           description: Test
@@ -291,41 +291,41 @@ paths:
                 properties:
                   ogenString:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringOgen
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringOgen
                   ogenNumber:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.NumberOgen
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberOgen
                   jsonString:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
                   jsonNumber:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.NumberJSON
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberJSON
                   textString:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Text
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Text
                   textNumber:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Text
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Text
                   binaryByte:
                     type: string
                     format: byte
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Binary
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Binary
                   binaryBase64:
                     type: string
                     format: base64
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Binary
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Binary
                   string:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.String
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.String
                   number:
                     type: number
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.Number
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.Number
                   alias:
                     $ref: '#/components/schemas/Alias'
                   pointer:
                     type: number
-                    x-ogen-type: '*github.com/ogen-go/ogen/_testdata/testtypes.NumberOgen'
+                    x-ogen-type: '*github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberOgen'
                     x-ogen-name: Pointer
                   aliasPointer:
                     $ref: '#/components/schemas/AliasPointer'
@@ -341,18 +341,18 @@ paths:
                     type: array
                     items:
                       type: string
-                      x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+                      x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
                   map:
                     type: object
                     additionalProperties:
                       type: string
-                      x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringJSON
+                      x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringJSON
 
 components:
   schemas:
     Alias:
       type: string
-      x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes.StringOgen
+      x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringOgen
     AliasPointer:
       type: string
-      x-ogen-type: '*github.com/ogen-go/ogen/_testdata/testtypes.StringOgen'
+      x-ogen-type: '*github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.StringOgen'

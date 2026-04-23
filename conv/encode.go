@@ -15,7 +15,7 @@ import (
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 
-	"github.com/ogen-go/ogen/json"
+	"github.com/shiroma-lukas/ogen-multispec/json"
 )
 
 func IntToString(v int) string     { return strconv.Itoa(v) }

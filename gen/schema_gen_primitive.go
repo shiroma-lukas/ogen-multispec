@@ -5,9 +5,9 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/location"
+	"github.com/shiroma-lukas/ogen-multispec/gen/ir"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/location"
 )
 
 func (g *schemaGen) primitive(name string, schema *jsonschema.Schema) (*ir.Type, error) {
@@ -166,7 +166,7 @@ func TypeFormatMapping() map[jsonschema.SchemaType]map[string]ir.PrimitiveType {
 			"uint32": ir.Uint32,
 			"uint64": ir.Uint64,
 
-			// See https://github.com/ogen-go/ogen/issues/307.
+			// See https://github.com/shiroma-lukas/ogen-multispec/issues/307.
 			"unix":         ir.Time,
 			"unix-seconds": ir.Time,
 			"unix-nano":    ir.Time,
@@ -201,7 +201,7 @@ func TypeFormatMapping() map[jsonschema.SchemaType]map[string]ir.PrimitiveType {
 			"hostname":  ir.String,
 			"":          ir.String,
 
-			// Custom format, see https://github.com/ogen-go/ogen/issues/309.
+			// Custom format, see https://github.com/shiroma-lukas/ogen-multispec/issues/309.
 			"int":   ir.Int,
 			"int8":  ir.Int8,
 			"int16": ir.Int16,
@@ -213,13 +213,13 @@ func TypeFormatMapping() map[jsonschema.SchemaType]map[string]ir.PrimitiveType {
 			"uint16": ir.Uint16,
 			"uint32": ir.Uint32,
 			"uint64": ir.Uint64,
-			// See https://github.com/ogen-go/ogen/issues/307.
+			// See https://github.com/shiroma-lukas/ogen-multispec/issues/307.
 			"unix":         ir.Time,
 			"unix-seconds": ir.Time,
 			"unix-nano":    ir.Time,
 			"unix-micro":   ir.Time,
 			"unix-milli":   ir.Time,
-			// See https://github.com/ogen-go/ogen/issues/957.
+			// See https://github.com/shiroma-lukas/ogen-multispec/issues/957.
 			"float32": ir.Float32,
 			"float64": ir.Float64,
 			"decimal": ir.Decimal,

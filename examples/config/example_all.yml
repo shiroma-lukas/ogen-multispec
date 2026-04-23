@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/ogen-go/ogen/main/schemas/ogen.jsonschema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/shiroma-lukas/ogen-multispec/main/schemas/ogen.jsonschema.json
 
 # This file shows all available options with example values.
 
@@ -6,7 +6,7 @@
 parser:
   # Enables type inference for schemas. Schema parser will try to detect schema type by its properties. Default is false.
   infer_types: true
-  # Enables remote references resolving. See https://github.com/ogen-go/ogen/issues/385. Default is false.
+  # Enables remote references resolving. See https://github.com/shiroma-lukas/ogen-multispec/issues/385. Default is false.
   allow_remote: true
   # Maximum depth of schema generation. Default is 1000.
   depth_limit: 1000

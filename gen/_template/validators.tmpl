@@ -1,5 +1,5 @@
 {{- define "validate" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.Elem*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.Elem*/ -}}
 
 {{- $t := $.Type }}
 {{- $va := $t.Validators }}
@@ -202,7 +202,7 @@
 {{- end }}
 
 {{ define "validators/body" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}
 
 {{- range $t := $.Types }}{{/*Range schemas*/}}
 {{- if $t.NeedValidation }}{{/*Need validation*/}}
@@ -314,7 +314,7 @@ switch s {
 {{ end }}
 
 {{ define "validators" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}
 
 {{ template "header" $ }}
 

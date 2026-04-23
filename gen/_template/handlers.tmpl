@@ -1,5 +1,5 @@
 {{ define "handlers" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}
 {{ template "header" $ }}
 
 type codeRecorder struct {
@@ -36,7 +36,7 @@ func recordError(string, error) {}
 {{ end }}
 
 {{ define "handlers/operation" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.OperationElem*/ -}}{{ $op := $.Operation }}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.OperationElem*/ -}}{{ $op := $.Operation }}
 {{- $otel := $.Config.OpenTelemetryEnabled }}
 // handle{{ $op.Name }}Request handles {{ $op.PrettyOperationID }} operation.
 //

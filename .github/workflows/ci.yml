@@ -131,4 +131,4 @@ jobs:
           docker run \
           --rm \
           ghcr.io/$GITHUB_REPOSITORY:$GITHUB_SHA \
-          https://raw.githubusercontent.com/ogen-go/ogen/refs/heads/main/_testdata/examples/petstore.yml
+          https://raw.githubusercontent.com/shiroma-lukas/ogen-multispec/refs/heads/main/_testdata/examples/petstore.yml

@@ -18,4 +18,4 @@ paths:
                 properties:
                   test:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/baz/v2.Test
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/baz/v2.Test

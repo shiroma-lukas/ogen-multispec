@@ -1,5 +1,5 @@
 {{ define "unimplemented" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen.TemplateConfig*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen.TemplateConfig*/ -}}
 {{ template "header" $ }}
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -49,7 +49,7 @@ var _ WebhookHandler = UnimplementedHandler{}
 {{ end }}
 
 {{ define "unimplemented/operation" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen/ir.Operation*/ -}}{{ $op := $ }}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen/ir.Operation*/ -}}{{ $op := $ }}
 // {{ $op.Name }} implements {{ $op.PrettyOperationID }} operation.
 //
 {{- template "godoc_op" $op }}

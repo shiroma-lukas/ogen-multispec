@@ -372,7 +372,7 @@
     "/optionalHeaders": {
       "get": {
         "operationId": "optionalHeaders",
-        "description": "https://github.com/ogen-go/ogen/issues/822",
+        "description": "https://github.com/shiroma-lukas/ogen-multispec/issues/822",
         "responses": {
           "200": {
             "description": "test",

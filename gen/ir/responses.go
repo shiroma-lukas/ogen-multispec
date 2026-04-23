@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ogen-go/ogen/internal/xmaps"
+	"github.com/shiroma-lukas/ogen-multispec/internal/xmaps"
 )
 
 type ResponseInfo struct {

@@ -2,32 +2,25 @@
 <img width="256" height="256" src="_logo/logo.svg" alt="ogen svg logo">
 </p>
 
-# ogen [![Go Reference](https://img.shields.io/badge/go-pkg-00ADD8)](https://pkg.go.dev/github.com/ogen-go/ogen#section-documentation) [![codecov](https://img.shields.io/codecov/c/github/ogen-go/ogen?label=cover)](https://codecov.io/gh/ogen-go/ogen) [![stable](https://img.shields.io/badge/-stable-brightgreen)](https://go-faster.org/docs/projects/status#stable)
+# ogen [![Go Reference](https://img.shields.io/badge/go-pkg-00ADD8)](https://pkg.go.dev/github.com/shiroma-lukas/ogen-multispec#section-documentation) [![codecov](https://img.shields.io/codecov/c/github/shiroma-lukas/ogen-multispec?label=cover)](https://codecov.io/gh/shiroma-lukas/ogen-multispec) [![stable](https://img.shields.io/badge/-stable-brightgreen)](https://go-faster.org/docs/projects/status#stable)
 
 OpenAPI v3 Code Generator for Go.
 
 - [Getting started](https://ogen.dev/docs/intro)
 - [Sample project](https://github.com/ogen-go/example)
-- [Security policy](https://github.com/ogen-go/ogen/blob/-/SECURITY.md)
+- [Security policy](https://github.com/shiroma-lukas/ogen-multispec/blob/-/SECURITY.md)
 - [Telegram group `@ogen_dev`](https://t.me/ogen_dev)
 
 # Install
 
 ```console
-go install -v github.com/ogen-go/ogen/cmd/ogen@latest
+go install -v github.com/shiroma-lukas/ogen-multispec/cmd/ogen@latest
 ```
 
 # Usage
 
 ```go
-//go:generate go run github.com/ogen-go/ogen/cmd/ogen --target target/dir -package api --clean schema.json
-```
-
-or using container:
-```shell
-docker run --rm \
-  --volume ".:/workspace" \
-  ghcr.io/ogen-go/ogen:latest --target workspace/petstore --clean workspace/petstore.yml
+//go:generate go run github.com/shiroma-lukas/ogen-multispec/cmd/ogen --target target/dir -package api --clean schema.json
 ```
 
 # Features
@@ -487,7 +480,7 @@ components:
 Custom validators must be registered before validation is performed:
 
 ```go
-import "github.com/ogen-go/ogen/validate"
+import "github.com/shiroma-lukas/ogen-multispec/validate"
 
 // Register validators
 validate.RegisterValidator("minWords", func(value any, params any) error {
@@ -596,5 +589,5 @@ func (s *Error) Decode(d *jx.Decoder) error {
 
 - [Getting started](https://ogen.dev/docs/intro)
 - [Sample project](https://github.com/ogen-go/example)
-- [Security policy](https://github.com/ogen-go/ogen/blob/-/SECURITY.md)
+- [Security policy](https://github.com/shiroma-lukas/ogen-multispec/blob/-/SECURITY.md)
 - [Telegram chat `@ogen_dev`](https://t.me/ogen_dev)

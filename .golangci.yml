@@ -129,7 +129,7 @@ formatters:
   settings:
     goimports:
       local-prefixes:
-        - github.com/ogen-go/ogen
+        - github.com/shiroma-lukas/ogen-multispec
   exclusions:
     generated: lax
     paths:

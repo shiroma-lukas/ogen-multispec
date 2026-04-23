@@ -16,10 +16,10 @@ paths:
                 properties:
                   foo:
                     type: string
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/foo/decimal.Decimal
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/foo/decimal.Decimal
                     default: "1.23"
                   bar:
                     type: number
                     # OptDecimal is already generated for type above.
-                    x-ogen-type: github.com/ogen-go/ogen/_testdata/testtypes/bar/decimal.Decimal
+                    x-ogen-type: github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/bar/decimal.Decimal
                     default: 1.23

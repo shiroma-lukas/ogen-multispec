@@ -1,5 +1,5 @@
 {{- define "json/encode_struct_fields" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen/ir.JSON*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen/ir.JSON*/ -}}
 	{{- $fields := $.Fields }}
 	{{- $additional := $.AdditionalProps }}
 	{{- $pattern := $.PatternProps }}
@@ -70,7 +70,7 @@
 {{- end }}
 
 {{- define "json/encoders_struct" }}
-{{- /*gotype: github.com/ogen-go/ogen/gen/ir.Type*/ -}}
+{{- /*gotype: github.com/shiroma-lukas/ogen-multispec/gen/ir.Type*/ -}}
 {{- $fields := $.JSON.Fields }}
 {{- $additional := $.JSON.AdditionalProps }}
 {{- $pattern := $.JSON.PatternProps }}
