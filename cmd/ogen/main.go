@@ -282,6 +282,198 @@ read:
 	return opts, nil
 }
 
+type specTask struct {
+	specPath  string
+	targetDir string
+}
+
+func collectSpecTasks(specDir, targetDir string) ([]specTask, error) {
+	specDir, err := filepath.Abs(specDir)
+	if err != nil {
+		return nil, err
+	}
+	var tasks []specTask
+	if err := filepath.WalkDir(specDir, func(path string, d os.DirEntry, walkErr error) error {
+		if walkErr != nil {
+			return walkErr
+		}
+		if d.IsDir() {
+			return nil
+		}
+		if filepath.Ext(path) != ".json" {
+			return nil
+		}
+		relPath, err := filepath.Rel(specDir, path)
+		if err != nil {
+			return err
+		}
+		dirPart := filepath.Dir(relPath)
+		baseName := strings.TrimSuffix(filepath.Base(path), filepath.Ext(path))
+		switch dirPart {
+		case ".", "":
+			tasks = append(tasks, specTask{
+				specPath:  path,
+				targetDir: filepath.Join(targetDir, baseName),
+			})
+		default:
+			tasks = append(tasks, specTask{
+				specPath:  path,
+				targetDir: filepath.Join(targetDir, dirPart, baseName),
+			})
+		}
+		return nil
+	}); err != nil {
+		return nil, err
+	}
+	return tasks, nil
+}
+
+var commonGeneratedCandidates = map[string]struct{}{
+	"oas_cfg_gen.go":        {},
+	"oas_json_gen.go":       {},
+	"oas_validators_gen.go": {},
+	"oas_uri_gen.go":        {},
+	"oas_parameters_gen.go": {},
+	"oas_security_gen.go":   {},
+	"oas_middleware_gen.go": {},
+	"oas_router_gen.go":     {},
+	"oas_servers_gen.go":    {},
+	"oas_interfaces_gen.go": {},
+}
+
+func parseCandidateSet(raw string) map[string]struct{} {
+	if strings.TrimSpace(raw) == "" {
+		return commonGeneratedCandidates
+	}
+	candidates := make(map[string]struct{})
+	for _, part := range strings.Split(raw, ",") {
+		name := strings.TrimSpace(part)
+		if name == "" {
+			continue
+		}
+		candidates[name] = struct{}{}
+	}
+	if len(candidates) == 0 {
+		return commonGeneratedCandidates
+	}
+	return candidates
+}
+
+func collectCandidateFiles(roots []string, candidates map[string]struct{}) (map[string][]string, error) {
+	grouped := make(map[string][]string)
+	for _, root := range roots {
+		err := filepath.WalkDir(root, func(path string, d os.DirEntry, walkErr error) error {
+			if walkErr != nil {
+				return walkErr
+			}
+			if d.IsDir() {
+				return nil
+			}
+			name := d.Name()
+			if !strings.HasPrefix(name, "oas_") && !strings.HasPrefix(name, "openapi") {
+				return nil
+			}
+			if !strings.HasSuffix(name, "_gen.go") && !strings.HasSuffix(name, "_gen_test.go") {
+				return nil
+			}
+			if _, ok := candidates[name]; !ok {
+				return nil
+			}
+			grouped[name] = append(grouped[name], path)
+			return nil
+		})
+		if err != nil {
+			return nil, err
+		}
+	}
+	return grouped, nil
+}
+
+func moveCommonCandidateFiles(targetDir string, taskRoots []string, candidates map[string]struct{}) error {
+	taskCount := len(taskRoots)
+	if taskCount < 2 {
+		return nil
+	}
+	grouped, err := collectCandidateFiles(taskRoots, candidates)
+	if err != nil {
+		return err
+	}
+	commonDir := filepath.Join(targetDir, "common")
+	for name, paths := range grouped {
+		if len(paths) != taskCount {
+			continue
+		}
+		reference, err := os.ReadFile(paths[0])
+		if err != nil {
+			return err
+		}
+		for _, p := range paths[1:] {
+			data, err := os.ReadFile(p)
+			if err != nil {
+				return err
+			}
+			if !bytes.Equal(reference, data) {
+				reference = nil
+				break
+			}
+		}
+		if reference == nil {
+			continue
+		}
+		if err := os.MkdirAll(commonDir, 0o750); err != nil {
+			return err
+		}
+		dest := filepath.Join(commonDir, name)
+		if err := os.WriteFile(dest, reference, 0o644); err != nil {
+			return err
+		}
+		for _, p := range paths {
+			if err := os.Remove(p); err != nil && !os.IsNotExist(err) {
+				return err
+			}
+		}
+	}
+	return nil
+}
+
+func cleanTree(targetDir string) error {
+	if _, err := os.Stat(targetDir); os.IsNotExist(err) {
+		return nil
+	}
+	return os.RemoveAll(targetDir)
+}
+
+func runDirectoryMode(specDir, packageName, targetDir string, clean bool, opts gen.Options, candidates map[string]struct{}) error {
+	tasks, err := collectSpecTasks(specDir, targetDir)
+	if err != nil {
+		return errors.Wrap(err, "collect spec tasks")
+	}
+	if len(tasks) == 0 {
+		return errors.New("no .json spec files found in directory")
+	}
+	if clean {
+		if err := cleanTree(targetDir); err != nil {
+			return errors.Wrap(err, "clean target dir")
+		}
+	}
+	taskRoots := make([]string, 0, len(tasks))
+	for _, task := range tasks {
+		taskOpts := opts
+		data, err := taskOpts.SetLocation(task.specPath, gen.RemoteOptions{})
+		if err != nil {
+			return errors.Wrapf(err, "resolve spec %q", task.specPath)
+		}
+		if err := generate(data, packageName, task.targetDir, false, taskOpts); err != nil {
+			return errors.Wrapf(err, "generate %q", task.specPath)
+		}
+		taskRoots = append(taskRoots, task.targetDir)
+	}
+	if err := moveCommonCandidateFiles(targetDir, taskRoots, candidates); err != nil {
+		return errors.Wrap(err, "collect common files")
+	}
+	return nil
+}
+
 func run() error {
 	set := flag.NewFlagSet(os.Args[0], flag.ExitOnError)
 	set.Usage = func() {
@@ -299,6 +491,7 @@ func run() error {
 		targetDir   = set.String("target", "api", "Path to target dir")
 		packageName = set.String("package", "api", "Target package name")
 		clean       = set.Bool("clean", false, "Clean generated files before generation")
+		commonFiles = set.String("common-files", "", "Comma-separated generated filenames to evaluate for shared common output (directory mode only)")
 
 		// Parser options.
 		strict = set.Bool("strict", false, "Disable cross-type constraint interpretation (reject pattern on numbers, min/max on strings)")
@@ -386,6 +579,22 @@ func run() error {
 	if *strict {
 		strictVal := false
 		opts.Parser.AllowCrossTypeConstraints = &strictVal
+	}
+
+	info, err := os.Stat(specPath)
+	if err != nil {
+		return errors.Wrap(err, "stat spec path")
+	}
+
+	if info.IsDir() {
+		candidates := parseCandidateSet(*commonFiles)
+		if err := runDirectoryMode(specPath, *packageName, *targetDir, *clean, opts, candidates); err != nil {
+			if handleGenerateError(os.Stderr, logOptions.Color, err) {
+				return errors.New("generation failed")
+			}
+			return errors.Wrap(err, "generate directory")
+		}
+		return nil
 	}
 
 	data, err := opts.SetLocation(specPath, gen.RemoteOptions{})
