@@ -7,7 +7,7 @@ import (
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 
-	"github.com/ogen-go/ogen/internal/xslices"
+	"github.com/shiroma-lukas/ogen-multispec/internal/xslices"
 )
 
 func inferJSONType(v json.RawMessage) (string, error) {

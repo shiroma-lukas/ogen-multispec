@@ -8,7 +8,7 @@ import (
 	"github.com/go-faster/errors"
 	"go.uber.org/zap"
 
-	"github.com/ogen-go/ogen/gen/ir"
+	"github.com/shiroma-lukas/ogen-multispec/gen/ir"
 )
 
 type unimplementedError interface {

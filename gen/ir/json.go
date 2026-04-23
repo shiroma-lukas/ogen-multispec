@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ogen-go/ogen/internal/bitset"
-	"github.com/ogen-go/ogen/internal/naming"
-	"github.com/ogen-go/ogen/internal/xslices"
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/internal/bitset"
+	"github.com/shiroma-lukas/ogen-multispec/internal/naming"
+	"github.com/shiroma-lukas/ogen-multispec/internal/xslices"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
 )
 
 // JSON returns json encoding/decoding rules for t.

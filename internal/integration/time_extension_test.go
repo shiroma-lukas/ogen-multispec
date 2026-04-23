@@ -7,7 +7,7 @@ import (
 	"github.com/go-faster/jx"
 	"github.com/stretchr/testify/require"
 
-	api "github.com/ogen-go/ogen/internal/integration/test_time_extension"
+	api "github.com/shiroma-lukas/ogen-multispec/internal/integration/test_time_extension"
 )
 
 func TestTimeExtension(t *testing.T) {

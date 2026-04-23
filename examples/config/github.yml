@@ -1,7 +1,0 @@
-parser:
-  infer_types: true
-generator:
-  features:
-    enable:
-      - "debug/example_tests"
-  ignore_not_implemented: ["all"]

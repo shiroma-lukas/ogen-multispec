@@ -11,7 +11,7 @@ import (
 	"github.com/go-faster/errors"
 	"go.uber.org/zap"
 
-	"github.com/ogen-go/ogen/internal/urlpath"
+	"github.com/shiroma-lukas/ogen-multispec/internal/urlpath"
 )
 
 // ExternalResolver resolves external links.

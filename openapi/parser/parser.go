@@ -9,13 +9,13 @@ import (
 	"github.com/go-faster/errors"
 	"golang.org/x/exp/maps"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/internal/xmaps"
-	"github.com/ogen-go/ogen/jsonpointer"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/location"
-	"github.com/ogen-go/ogen/openapi"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/shiroma-lukas/ogen-multispec"
+	"github.com/shiroma-lukas/ogen-multispec/internal/xmaps"
+	"github.com/shiroma-lukas/ogen-multispec/jsonpointer"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/location"
+	"github.com/shiroma-lukas/ogen-multispec/openapi"
+	"github.com/shiroma-lukas/ogen-multispec/uri"
 )
 
 type refKey = jsonpointer.RefKey

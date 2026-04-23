@@ -6,8 +6,8 @@ import (
 	"github.com/go-faster/errors"
 	"golang.org/x/exp/maps"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/internal/xmaps"
+	"github.com/shiroma-lukas/ogen-multispec/gen/ir"
+	"github.com/shiroma-lukas/ogen-multispec/internal/xmaps"
 )
 
 // Example:

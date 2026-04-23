@@ -2,7 +2,7 @@
 
 package api
 
-import "github.com/ogen-go/ogen/validate"
+import "github.com/shiroma-lukas/ogen-multispec/validate"
 
 // Equal compares two WorkflowStatus instances for equality.
 // The depth parameter prevents infinite recursion on nested objects.

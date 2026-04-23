@@ -9,7 +9,7 @@ import (
 	"net/http"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/shiroma-lukas/ogen-multispec/validate"
 )
 
 func decodeEchoResponse(resp *http.Response) (res EchoOK, _ error) {

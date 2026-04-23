@@ -3,8 +3,8 @@
 package api
 
 import (
-	decimal3 "github.com/ogen-go/ogen/_testdata/testtypes/bar/decimal"
-	decimal2 "github.com/ogen-go/ogen/_testdata/testtypes/foo/decimal"
+	decimal3 "github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/bar/decimal"
+	decimal2 "github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/foo/decimal"
 )
 
 // NewOptDecimal returns new OptDecimal with value set to v.

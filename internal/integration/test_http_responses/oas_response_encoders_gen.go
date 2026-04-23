@@ -8,9 +8,9 @@ import (
 
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/conv"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/shiroma-lukas/ogen-multispec/conv"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
+	"github.com/shiroma-lukas/ogen-multispec/uri"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 )

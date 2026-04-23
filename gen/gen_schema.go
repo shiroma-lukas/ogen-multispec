@@ -7,9 +7,9 @@ import (
 	"github.com/go-faster/errors"
 	"go.uber.org/zap"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/internal/xmaps"
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/gen/ir"
+	"github.com/shiroma-lukas/ogen-multispec/internal/xmaps"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
 )
 
 func saveSchemaTypes(ctx *genctx, gen *schemaGen, refEncoding map[jsonschema.Ref]ir.Encoding) error {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/openapi"
 )
 
 // WebhookInfo contains information about webhook.

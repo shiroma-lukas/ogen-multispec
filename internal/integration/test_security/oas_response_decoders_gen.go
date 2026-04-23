@@ -5,7 +5,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/shiroma-lukas/ogen-multispec/validate"
 )
 
 func decodeCustomSecurityResponse(resp *http.Response) (res *CustomSecurityOK, _ error) {

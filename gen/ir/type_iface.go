@@ -5,7 +5,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ogen-go/ogen/internal/xmaps"
+	"github.com/shiroma-lukas/ogen-multispec/internal/xmaps"
 )
 
 func (t *Type) CanHaveMethods() bool {

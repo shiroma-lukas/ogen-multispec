@@ -3,7 +3,7 @@
 package api
 
 import (
-	"github.com/ogen-go/ogen/_testdata/testtypes/baz/v2"
+	"github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes/baz/v2"
 )
 
 type TestOK struct {

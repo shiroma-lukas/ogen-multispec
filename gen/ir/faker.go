@@ -39,7 +39,7 @@ func (t *Type) FakeValue() string {
 		}
 		return `netip.MustParseAddr("127.0.0.1")`
 	case URL:
-		return `url.URL{Scheme:"https", Host:"github.com", Path:"/ogen-go/ogen"}`
+		return `url.URL{Scheme:"https", Host:"github.com", Path:"/shiroma-lukas/ogen-multispec"}`
 	case Bool:
 		return "true"
 	case Decimal:

@@ -17,10 +17,10 @@ import (
 	"github.com/go-faster/yaml"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/location"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/shiroma-lukas/ogen-multispec"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/location"
+	"github.com/shiroma-lukas/ogen-multispec/openapi"
 )
 
 type external map[string]any

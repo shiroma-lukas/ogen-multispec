@@ -3,8 +3,8 @@ package gen
 import (
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/internal/naming"
+	"github.com/shiroma-lukas/ogen-multispec/gen/ir"
+	"github.com/shiroma-lukas/ogen-multispec/internal/naming"
 )
 
 func checkStructRecursions(s *ir.Type) error {

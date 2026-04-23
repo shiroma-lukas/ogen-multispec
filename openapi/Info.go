@@ -1,6 +1,6 @@
 package openapi
 
-import "github.com/ogen-go/ogen/jsonschema"
+import "github.com/shiroma-lukas/ogen-multispec/jsonschema"
 
 type (
 	// Extensions is a map of OpenAPI extensions.

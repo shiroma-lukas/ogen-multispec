@@ -10,9 +10,9 @@ import (
 	"github.com/go-faster/jx"
 	"github.com/shopspring/decimal"
 
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/ogenregex"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/ogenregex"
+	"github.com/shiroma-lukas/ogen-multispec/validate"
 )
 
 type Validators struct {

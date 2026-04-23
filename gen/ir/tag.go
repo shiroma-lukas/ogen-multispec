@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ogen-go/ogen/internal/xmaps"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/shiroma-lukas/ogen-multispec/internal/xmaps"
+	"github.com/shiroma-lukas/ogen-multispec/openapi"
 )
 
 // Tag of Field or Parameter.

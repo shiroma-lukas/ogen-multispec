@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	"github.com/go-faster/jx"
-	ht "github.com/ogen-go/ogen/http"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
 )
 
 func encodeCreateWorkflowTransitionsRequest(

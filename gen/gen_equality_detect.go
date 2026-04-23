@@ -1,6 +1,6 @@
 package gen
 
-import "github.com/ogen-go/ogen/gen/ir"
+import "github.com/shiroma-lukas/ogen-multispec/gen/ir"
 
 const (
 	prefixOpt  = "Opt"

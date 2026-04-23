@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/location"
+	"github.com/shiroma-lukas/ogen-multispec/location"
 )
 
 // Operation is an OpenAPI Operation.

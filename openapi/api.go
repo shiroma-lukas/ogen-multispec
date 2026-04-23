@@ -2,8 +2,8 @@
 package openapi
 
 import (
-	"github.com/ogen-go/ogen/jsonpointer"
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/jsonpointer"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
 )
 
 // Ref is a JSON Reference.

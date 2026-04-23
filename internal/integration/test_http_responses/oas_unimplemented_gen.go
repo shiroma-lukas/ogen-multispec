@@ -5,7 +5,7 @@ package api
 import (
 	"context"
 
-	ht "github.com/ogen-go/ogen/http"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.
@@ -102,7 +102,7 @@ func (UnimplementedHandler) OctetStreamEmptySchema(ctx context.Context) (r Octet
 
 // OptionalHeaders implements optionalHeaders operation.
 //
-// Https://github.com/ogen-go/ogen/issues/822.
+// Https://github.com/shiroma-lukas/ogen-multispec/issues/822.
 //
 // GET /optionalHeaders
 func (UnimplementedHandler) OptionalHeaders(ctx context.Context) (r *OptionalHeadersOK, _ error) {

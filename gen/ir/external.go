@@ -144,14 +144,14 @@ func parseTypePath(input string) (pkgPath, typeName string, isPointer bool, _ er
 }
 
 var encoders = map[[2]string]ExternalEncoding{
-	{"github.com/ogen-go/ogen/json", "Marshaler"}: ExternalNative,
+	{"github.com/shiroma-lukas/ogen-multispec/json", "Marshaler"}: ExternalNative,
 	{"encoding/json", "Marshaler"}:                ExternalJSON,
 	{"encoding", "TextMarshaler"}:                 ExternalText,
 	{"encoding", "BinaryMarshaler"}:               ExternalBinary,
 }
 
 var decoders = map[[2]string]ExternalEncoding{
-	{"github.com/ogen-go/ogen/json", "Unmarshaler"}: ExternalNative,
+	{"github.com/shiroma-lukas/ogen-multispec/json", "Unmarshaler"}: ExternalNative,
 	{"encoding/json", "Unmarshaler"}:                ExternalJSON,
 	{"encoding", "TextUnmarshaler"}:                 ExternalText,
 	{"encoding", "BinaryUnmarshaler"}:               ExternalBinary,

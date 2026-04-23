@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/go-faster/errors"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/uri"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
+	"github.com/shiroma-lukas/ogen-multispec/uri"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/metric"

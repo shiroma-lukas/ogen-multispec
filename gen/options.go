@@ -15,11 +15,11 @@ import (
 	"github.com/go-faster/yaml"
 	"go.uber.org/zap"
 
-	"github.com/ogen-go/ogen/gen/ir"
-	"github.com/ogen-go/ogen/internal/urlpath"
-	"github.com/ogen-go/ogen/jsonschema"
-	"github.com/ogen-go/ogen/location"
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/shiroma-lukas/ogen-multispec/gen/ir"
+	"github.com/shiroma-lukas/ogen-multispec/internal/urlpath"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/location"
+	"github.com/shiroma-lukas/ogen-multispec/openapi"
 )
 
 // Options is Generator options.
@@ -60,7 +60,7 @@ type ParseOptions struct {
 	InferSchemaType bool `json:"infer_types" yaml:"infer_types"`
 	// AllowRemote enables remote references resolving.
 	//
-	// See https://github.com/ogen-go/ogen/issues/385.
+	// See https://github.com/shiroma-lukas/ogen-multispec/issues/385.
 	AllowRemote bool `json:"allow_remote" yaml:"allow_remote"`
 	// RootURL is root URL for remote references resolving.
 	RootURL *url.URL `json:"-" yaml:"-"`

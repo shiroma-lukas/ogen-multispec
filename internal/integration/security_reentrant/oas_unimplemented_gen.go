@@ -5,7 +5,7 @@ package api
 import (
 	"context"
 
-	ht "github.com/ogen-go/ogen/http"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
 )
 
 // UnimplementedHandler is no-op Handler which returns http.ErrNotImplemented.

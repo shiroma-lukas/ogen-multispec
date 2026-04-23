@@ -61,7 +61,7 @@ type Handler interface {
 	OctetStreamEmptySchema(ctx context.Context) (OctetStreamEmptySchemaOK, error)
 	// OptionalHeaders implements optionalHeaders operation.
 	//
-	// Https://github.com/ogen-go/ogen/issues/822.
+	// Https://github.com/shiroma-lukas/ogen-multispec/issues/822.
 	//
 	// GET /optionalHeaders
 	OptionalHeaders(ctx context.Context) (*OptionalHeadersOK, error)

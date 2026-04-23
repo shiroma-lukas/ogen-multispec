@@ -16,7 +16,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	api "github.com/ogen-go/ogen/internal/integration/test_parameters"
+	api "github.com/shiroma-lukas/ogen-multispec/internal/integration/test_parameters"
 )
 
 type testParameters struct{}

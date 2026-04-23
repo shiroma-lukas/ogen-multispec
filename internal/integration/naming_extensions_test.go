@@ -6,7 +6,7 @@ import (
 	"github.com/go-faster/jx"
 	"github.com/stretchr/testify/require"
 
-	api "github.com/ogen-go/ogen/internal/integration/test_naming_extensions"
+	api "github.com/shiroma-lukas/ogen-multispec/internal/integration/test_naming_extensions"
 )
 
 func TestNamingExtensions(t *testing.T) {

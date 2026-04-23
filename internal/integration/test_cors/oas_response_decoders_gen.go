@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/uri"
-	"github.com/ogen-go/ogen/validate"
+	"github.com/shiroma-lukas/ogen-multispec/conv"
+	"github.com/shiroma-lukas/ogen-multispec/uri"
+	"github.com/shiroma-lukas/ogen-multispec/validate"
 )
 
 func decodeFooGetResponse(resp *http.Response) (res *FooGetOK, _ error) {

@@ -1,7 +1,7 @@
 package ogen
 
 import (
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
 )
 
 // ToJSONSchema converts Schema to jsonschema.Schema.

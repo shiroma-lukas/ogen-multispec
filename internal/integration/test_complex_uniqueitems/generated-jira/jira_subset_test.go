@@ -3,7 +3,7 @@ package api
 import (
 	"testing"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/shiroma-lukas/ogen-multispec/validate"
 )
 
 // T057: JIRA API subset - real-world validation

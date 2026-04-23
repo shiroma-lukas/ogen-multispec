@@ -36,9 +36,9 @@ func TestGetExternalEncoding(t *testing.T) {
 			},
 		},
 		{
-			input: "github.com/ogen-go/ogen/_testdata/testtypes.NumberOgen",
+			input: "github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes.NumberOgen",
 			want: ExternalType{
-				PackagePath: "github.com/ogen-go/ogen/_testdata/testtypes",
+				PackagePath: "github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes",
 				PackageName: "testtypes",
 				TypeName:    "NumberOgen",
 				Encode:      ExternalNative,
@@ -46,9 +46,9 @@ func TestGetExternalEncoding(t *testing.T) {
 			},
 		},
 		{
-			input: "*(github.com/ogen-go/ogen/_testdata/testtypes).NumberOgen",
+			input: "*(github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes).NumberOgen",
 			want: ExternalType{
-				PackagePath: "github.com/ogen-go/ogen/_testdata/testtypes",
+				PackagePath: "github.com/shiroma-lukas/ogen-multispec/_testdata/testtypes",
 				PackageName: "testtypes",
 				TypeName:    "NumberOgen",
 				Encode:      ExternalNative,

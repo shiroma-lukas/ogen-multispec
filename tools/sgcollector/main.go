@@ -16,7 +16,7 @@ import (
 	"go.uber.org/zap/zapcore"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/ogen-go/ogen/internal/ogenzap"
+	"github.com/shiroma-lukas/ogen-multispec/internal/ogenzap"
 )
 
 func run(ctx context.Context) error {

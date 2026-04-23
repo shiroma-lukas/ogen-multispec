@@ -13,8 +13,8 @@ import (
 	"github.com/go-faster/errors"
 	"github.com/stretchr/testify/require"
 
-	api "github.com/ogen-go/ogen/internal/integration/sample_api"
-	issue1161 "github.com/ogen-go/ogen/internal/integration/test_issue1161"
+	api "github.com/shiroma-lukas/ogen-multispec/internal/integration/sample_api"
+	issue1161 "github.com/shiroma-lukas/ogen-multispec/internal/integration/test_issue1161"
 )
 
 func BenchmarkFindRoute(b *testing.B) {

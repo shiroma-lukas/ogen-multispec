@@ -7,8 +7,8 @@ import (
 	"github.com/go-faster/errors"
 	"github.com/go-faster/jx"
 
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/validate"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
+	"github.com/shiroma-lukas/ogen-multispec/validate"
 )
 
 // ErrorHandler is an error handler.

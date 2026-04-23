@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"strings"
 
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/ogenregex"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
+	"github.com/shiroma-lukas/ogen-multispec/middleware"
+	"github.com/shiroma-lukas/ogen-multispec/ogenerrors"
+	"github.com/shiroma-lukas/ogen-multispec/ogenregex"
 )
 
 var regexMap = map[string]ogenregex.Regexp{

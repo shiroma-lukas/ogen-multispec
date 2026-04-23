@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ogen-go/ogen"
+	"github.com/shiroma-lukas/ogen-multispec"
 )
 
 func TestParseDiscriminator(t *testing.T) {

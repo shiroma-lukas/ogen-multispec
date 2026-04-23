@@ -11,12 +11,12 @@ import (
 	"github.com/go-faster/errors"
 	"github.com/go-faster/yaml"
 
-	"github.com/ogen-go/ogen/gen"
-	"github.com/ogen-go/ogen/gen/genfs"
-	"github.com/ogen-go/ogen/internal/ogenzap"
-	"github.com/ogen-go/ogen/internal/urlpath"
-	"github.com/ogen-go/ogen/jsonpointer"
-	"github.com/ogen-go/ogen/jsonschema"
+	"github.com/shiroma-lukas/ogen-multispec/gen"
+	"github.com/shiroma-lukas/ogen-multispec/gen/genfs"
+	"github.com/shiroma-lukas/ogen-multispec/internal/ogenzap"
+	"github.com/shiroma-lukas/ogen-multispec/internal/urlpath"
+	"github.com/shiroma-lukas/ogen-multispec/jsonpointer"
+	"github.com/shiroma-lukas/ogen-multispec/jsonschema"
 )
 
 // StringArrayFlag is a string array flag.

@@ -8,10 +8,10 @@ import (
 	"strings"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/shiroma-lukas/ogen-multispec/conv"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
+	"github.com/shiroma-lukas/ogen-multispec/ogenerrors"
+	"github.com/shiroma-lukas/ogen-multispec/uri"
 )
 
 func trimTrailingSlashes(u *url.URL) {

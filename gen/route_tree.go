@@ -1,7 +1,7 @@
 package gen
 
 import (
-	"github.com/ogen-go/ogen/gen/ir"
+	"github.com/shiroma-lukas/ogen-multispec/gen/ir"
 )
 
 // RouteTree is Radix tree of routes.

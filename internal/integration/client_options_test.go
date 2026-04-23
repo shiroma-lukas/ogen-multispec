@@ -10,8 +10,8 @@ import (
 	"strings"
 	"testing"
 
-	ht "github.com/ogen-go/ogen/http"
-	api "github.com/ogen-go/ogen/internal/integration/test_client_options"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
+	api "github.com/shiroma-lukas/ogen-multispec/internal/integration/test_client_options"
 
 	"github.com/stretchr/testify/require"
 )

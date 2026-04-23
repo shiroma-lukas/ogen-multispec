@@ -5,7 +5,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/ogen-go/ogen/openapi"
+	"github.com/shiroma-lukas/ogen-multispec/openapi"
 )
 
 // ParameterKey is a map key for parameters.

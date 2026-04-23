@@ -8,7 +8,7 @@ import (
 
 	"github.com/go-faster/errors"
 
-	"github.com/ogen-go/ogen/gen/ir"
+	"github.com/shiroma-lukas/ogen-multispec/gen/ir"
 )
 
 // idSeq is a monotonically increasing id sequence.

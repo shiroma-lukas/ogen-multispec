@@ -3,7 +3,7 @@ package uri
 import (
 	"net/http"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/shiroma-lukas/ogen-multispec/validate"
 )
 
 type HeaderDecoder struct {

@@ -8,7 +8,7 @@ import (
 	"github.com/go-faster/errors"
 	"golang.org/x/tools/imports"
 
-	"github.com/ogen-go/ogen/gen/ir"
+	"github.com/shiroma-lukas/ogen-multispec/gen/ir"
 )
 
 // generateEqualityMethodsWithFS generates Equal() and Hash() methods using a FileSystem

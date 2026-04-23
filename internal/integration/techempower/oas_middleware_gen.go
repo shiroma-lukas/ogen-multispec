@@ -3,7 +3,7 @@
 package techempower
 
 import (
-	"github.com/ogen-go/ogen/middleware"
+	"github.com/shiroma-lukas/ogen-multispec/middleware"
 )
 
 // Middleware is middleware type.

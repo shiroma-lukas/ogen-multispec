@@ -5,10 +5,10 @@ package api
 import (
 	"net/http"
 
-	ht "github.com/ogen-go/ogen/http"
-	"github.com/ogen-go/ogen/middleware"
-	"github.com/ogen-go/ogen/ogenerrors"
-	"github.com/ogen-go/ogen/otelogen"
+	ht "github.com/shiroma-lukas/ogen-multispec/http"
+	"github.com/shiroma-lukas/ogen-multispec/middleware"
+	"github.com/shiroma-lukas/ogen-multispec/ogenerrors"
+	"github.com/shiroma-lukas/ogen-multispec/otelogen"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"

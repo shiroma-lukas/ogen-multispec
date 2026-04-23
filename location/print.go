@@ -11,7 +11,7 @@ import (
 	"github.com/go-faster/errors"
 	"golang.org/x/exp/constraints"
 
-	"github.com/ogen-go/ogen/internal/xslices"
+	"github.com/shiroma-lukas/ogen-multispec/internal/xslices"
 )
 
 // ColorFunc defines a simple printer callback.

@@ -4,7 +4,7 @@ package api
 
 import (
 	"github.com/go-faster/jx"
-	"github.com/ogen-go/ogen/json"
+	"github.com/shiroma-lukas/ogen-multispec/json"
 )
 
 // setDefaults set default value of fields.

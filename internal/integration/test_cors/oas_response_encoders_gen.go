@@ -6,8 +6,8 @@ import (
 	"net/http"
 
 	"github.com/go-faster/errors"
-	"github.com/ogen-go/ogen/conv"
-	"github.com/ogen-go/ogen/uri"
+	"github.com/shiroma-lukas/ogen-multispec/conv"
+	"github.com/shiroma-lukas/ogen-multispec/uri"
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 )

@@ -3,7 +3,7 @@ package api
 import (
 	"testing"
 
-	"github.com/ogen-go/ogen/validate"
+	"github.com/shiroma-lukas/ogen-multispec/validate"
 )
 
 // T053: Integration test combining all field types
